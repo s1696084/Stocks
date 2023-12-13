@@ -27,14 +27,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install alpaca-trade-api requests
 
-      - name: Debugging Output
+      - name: Debugging Output - Stocks Directory
         run: |
-          echo "Current directory: $(pwd)"
-          echo "List files: $(ls)"
-          echo "List files in Stock directory: $(ls Stock)"
+         echo "List files in Stocks directory: $(ls Stocks)"
 
-      - name: List All Files
-        run: ls -R
 
       - name: Run Alpaca Trading Script
         run: python Stocks/Stock.py
