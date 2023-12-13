@@ -31,6 +31,11 @@ jobs:
         run: |
          echo "List files in Stocks directory: $(ls Stocks)"
 
+      - name: Debugging Output - Current Directory
+        run: |
+         echo "Current directory: $(pwd)"
+         echo "List files in current directory: $(ls)"
+
 
       - name: Run Alpaca Trading Script
         run: python Stock.py
