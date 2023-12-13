@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
   schedule:
-    - cron: '30 14-21 * * 1-5'  # 9:30 a.m. to 4:30 p.m. UTC, Monday to Friday
+    - cron: '30 14-21 * * 1-5'
 
 jobs:
   build:
@@ -25,10 +25,10 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r alpaca-py
 
       - name: Run Alpaca Trading Script
-        run: python your_script.py
+        run: python Stock.py
         env:
           ALPACA_API_KEY: ${{ secrets.PKBL3JHF9AQTJPEVXPB5 }}
           ALPACA_SECRET_KEY: ${{ secrets.lnYLaAvAp34Pr2BS6YRjf9sonIltjuVFuf2vIs3f }}
