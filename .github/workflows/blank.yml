@@ -27,9 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install alpaca-trade-api requests
 
-      - name: Check File Permissions
-        run: ls -l Stock.py
-
+      - name: Debugging Output
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "List files: $(ls)"
+          echo "List files in Stock directory: $(ls Stock)"
 
       - name: Run Alpaca Trading Script
         run: python Stock.py
