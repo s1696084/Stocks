@@ -27,9 +27,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install alpaca-trade-api requests
 
-      - name: List Contents in Repository
-        run:
-           ls -R
+      - name: Check File Permissions
+        run: ls -l Stock.py
+
 
       - name: Run Alpaca Trading Script
         run: python Stock.py
