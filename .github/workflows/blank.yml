@@ -33,6 +33,9 @@ jobs:
           echo "List files: $(ls)"
           echo "List files in Stock directory: $(ls Stock)"
 
+      - name: List All Files
+        run: ls -R
+
       - name: Run Alpaca Trading Script
         run: python Stocks/Stock.py
         env:
