@@ -31,7 +31,6 @@ jobs:
         run: |
           echo "Current directory: $(pwd)"
           echo "List files in current directory: $(ls)"
-          echo "List files in Stocks directory: $(ls .github/workflows/Stocks)"
 
       - name: Run Alpaca Trading Script
         run: |
