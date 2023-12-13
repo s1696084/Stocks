@@ -35,12 +35,9 @@ jobs:
 
       - name: Run Alpaca Trading Script
         run: |
-          # Navigate to the Stocks directory based on relative path
-          cd .github/workflows/Stocks || exit 1
-
           # Search for the Stock.py file and store its path
           file_path=$(find . -type f -name "Stock.py" | head -n 1)
-
+          
           # Check if the file was found
           if [ -f "$file_path" ]; then
             echo "File found at path: $file_path"
