@@ -38,7 +38,7 @@ jobs:
 
 
       - name: Run Alpaca Trading Script
-        run: python Stock.py
+        run: python Stocks/Stock/Stock.py
         env:
           ALPACA_API_KEY: ${{ secrets.PKBL3JHF9AQTJPEVXPB5 }}
           ALPACA_SECRET_KEY: ${{ secrets.lnYLaAvAp34Pr2BS6YRjf9sonIltjuVFuf2vIs3f }}
