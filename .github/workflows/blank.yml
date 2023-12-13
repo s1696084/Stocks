@@ -31,17 +31,16 @@ jobs:
         run: |
           echo "Current directory: $(pwd)"
           echo "List files in current directory: $(ls)"
-          echo "List files in Stocks directory: $(ls Stocks)"   
-          
+          echo "List files in Stocks directory: $(ls .github/workflows/Stocks)"
 
       - name: Run Alpaca Trading Script
         run: |
-          # Navigate to the Stocks directory
-          cd Stocks || exit 1
-      
+          # Navigate to the Stocks directory based on relative path
+          cd .github/workflows/Stocks || exit 1
+
           # Search for the Stock.py file and store its path
           file_path=$(find . -type f -name "Stock.py" | head -n 1)
-          
+
           # Check if the file was found
           if [ -f "$file_path" ]; then
             echo "File found at path: $file_path"
@@ -50,8 +49,7 @@ jobs:
             echo "Error: Stock.py not found."
             exit 1
           fi
-    env:
-      ALPACA_API_KEY: ${{ secrets.PKBL3JHF9AQTJPEVXPB5 }}
-      ALPACA_SECRET_KEY: ${{ secrets.lnYLaAvAp34Pr2BS6YRjf9sonIltjuVFuf2vIs3f }}
-      WEATHER_API_KEY: ${{ secrets.bdb08a1cfe0e641014d62d0fca4d82a8 }}
-
+        env:
+          ALPACA_API_KEY: ${{ secrets.PKBL3JHF9AQTJPEVXPB5 }}
+          ALPACA_SECRET_KEY: ${{ secrets.lnYLaAvAp34Pr2BS6YRjf9sonIltjuVFuf2vIs3f }}
+          WEATHER_API_KEY: ${{ secrets.bdb08a1cfe0e641014d62d0fca4d82a8 }}
