@@ -1,8 +1,8 @@
 import requests
 import alpaca_trade_api as tradeapi
 
-alpaca_api_key = 'qjJs7YcUZ9IcQa1siHzM8eZpFcTJ7vLbpaLOIr37'
-alpaca_secret_key = 'PKL9JQMNWF0FS4Z6X7I8'
+alpaca_api_key = 'PKL9JQMNWF0FS4Z6X7I8'
+alpaca_secret_key = 'qjJs7YcUZ9IcQa1siHzM8eZpFcTJ7vLbpaLOIr37'
 base_url = "https://paper-api.alpaca.markets"
 
 weather_api_key = "bdb08a1cfe0e641014d62d0fca4d82a8"
