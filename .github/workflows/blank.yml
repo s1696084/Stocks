@@ -31,6 +31,17 @@ jobs:
         run: chmod +x Stocks/scripts/Stock.py
         working-directory: ${{ github.workspace }}
 
+      - name: List Repository Contents
+        run: ls -R
+        working-directory: ${{ github.workspace }}
+
+      - name: Debug Print
+        run: |
+          pwd
+          ls -R
+        working-directory: ${{ github.workspace }}
+
+
       - name: Run Alpaca Trading Script
         run: python Stocks/scripts/Stock.py
         env:
