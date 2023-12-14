@@ -16,8 +16,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        with:
-          path: Stocks  # Set the path to the Stocks directory
+    
 
       - name: Set up Python
         uses: actions/setup-python@v2
