@@ -27,9 +27,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install alpaca-trade-api requests
 
-      - name: Set execute permissions
-        run: chmod +x Stocks/scripts/Stock.py
-        working-directory: ${{ github.workspace }}
 
       - name: List Repository Contents
         run: ls -R
