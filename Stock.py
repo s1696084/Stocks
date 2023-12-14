@@ -1,6 +1,6 @@
 import requests
 from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import MarketOrderRequest
+from alpaca-trade-api alpaca-py import MarketOrderRequest
 from alpaca.trading.enums import OrderSide, TimeInForce
 
 alpaca_api_key = 'PKBL3JHF9AQTJPEVXPB5'
