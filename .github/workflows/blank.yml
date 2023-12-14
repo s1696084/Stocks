@@ -29,9 +29,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install alpaca-trade-api requests
 
-      - name: Set execute permissions
-        run: chmod +x Stocks/scripts/Stock.py
-        working-directory: Stocks  # Set the working directory to Stocks
 
       - name: Run Alpaca Trading Script
         run: python scripts/Stock.py
