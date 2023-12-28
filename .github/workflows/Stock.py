@@ -49,7 +49,7 @@ def buy_stock():
     print(f"Current Buying Power: {account.buying_power}")
     print(f"Conditions: Weather - {get_current_weather()}, Game Result - {result}")
 
-    if get_current_weather() and result == 'Win':
+    if get_current_weather() and result == 'Loss':
         if float(account.buying_power) > 0:
             # Preparing orders
             alpaca_client.submit_order(
